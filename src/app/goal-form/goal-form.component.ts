@@ -9,7 +9,7 @@ import { Goal } from '../goal';
 export class GoalFormComponent implements OnInit {
 
   newGoal = new Goal(0,"","",new Date());
-  @Output() addGoal = new EventEmitter<Goal>();
+  @Output() addGoal = new EventEmitter<Goal>(); //an event emitter to emmit events to be bound to the parent component
 
   submitGoal(){
 this.addGoal.emit(this.newGoal);
